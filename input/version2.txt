@@ -1,0 +1,141 @@
+8 6              world x and y dims
+0 0 3            viewpoint (x, y, z)
+
+20               plane---------->BACKGROUND TOP
+1 1 1            r g b ambient
+5 2 1            r g b diffuse
+0 0 0            r g b specular
+0 0 1          normal
+-4 0 -10         point
+1              shader index
+
+0 .75 -1         normal
+0 0 -5           point
+
+16               tiled plane------------->FLOOR
+0.2 0.2 0.2      r g b
+0.0 0.0 0.0      r g b
+2.0 2.0 2.0      r g b
+0 1 0            normal
+0 -4 0           point
+1.0 0.0 1.0      grid direction
+1.0 1.0          gridsize
+0.2 0.2 0.2      r g b
+3.0 3.0 3.0      r g b
+0.0 0.0 0.0      r g b
+
+10               light---------->CENTER BACKGROUND LIGHT
+3 5 1            r g b ambient
+0 3 -5           center
+
+10               light---------->LEFT BACKGROUND LIGHT
+5 4 1            r g b ambient
+-3 2 -8          center
+
+10               light---------->RIGHT BACKGROUND LIGHT
+5 4 1            r g b ambient
+3 2 -8           center
+
+13               sphere---------->HEAD
+0 0 0            ambient
+1 2 2            r g b diffuse
+.2 .2 .2         r g b specular
+
+0 -.5 -3         center
+2.85             radius
+
+13               sphere---------->LEFT EAR
+0 0 0            ambient
+1 2 4            r g b diffuse
+.2 .2 .2         r g b specular
+
+-3.15 1 -1.5     center
+1.65             radius
+
+13               sphere---------->RIGHT EAR
+0 0 0            ambient
+1 2 4            r g b diffuse
+.2 .2 .2         r g b specular
+
+3.15 1 -1.5      center
+1.65             radius
+
+13               sphere---------->LEFT EYE
+0 0 0            ambient
+5 5 5            r g b diffuse
+.1 .1 .1         r g b specular
+
+-.85 0 -.35      center
+.40              radius
+
+13               sphere---------->LEFT IRIS
+0 0 0            ambient
+0 3 5            r g b diffuse
+.1 .1 .1         r g b specular
+
+-.80 0 -.13      center
+.25              radius
+
+13               sphere---------->LEFT PUPIL
+0 0 0            ambient
+0 0 0            r g b diffuse
+0 0 0            r g b specular
+
+-.75 0 .1        center
+.12              radius
+
+13               sphere---------->RIGHT EYE
+0 0 0            ambient
+5 5 5            r g b diffuse
+.1 .1 .1         r g b specular
+
+.85 0 -.35       center
+.40              radius
+
+13               sphere---------->RIGHT IRIS
+0 0 0            ambient
+0 3 5            r g b diffuse
+.1 .1 .1         r g b specular
+
+.80 0 -.13       center
+.25              radius
+
+13               sphere---------->RIGHT PUPIL
+0 0 0            ambient
+0 0 0            r g b diffuse
+0 0 0            r g b specular
+
+.75 0 .1         center
+.12              radius
+
+13               sphere---------->MOUTH
+0 0 0            ambient
+0 0 0            r g b diffuse
+0 0 0            r g b specular
+
+0 -1.30 -.85     center
+.85              radius
+
+13               sphere---------->TONGUE
+0 0 0            ambient
+1 0 0            r g b diffuse
+0 0 0            r g b specular
+
+0 -1.6 -.2       center
+.45              radius
+
+10               light---------->TOP LIGHT
+0 9 0            r g b ambient
+0 2 5            center
+
+10               light---------->BOTTOM LIGHT
+0 0 9            r g b ambient
+0 -4 5           center
+
+10               light---------->LEFT LIGHT
+9 0 0            r g b ambient
+-1 0 5           center
+
+10               light---------->RIGHT LIGHT
+9 0 0            r g b ambient
+1 0 5            center

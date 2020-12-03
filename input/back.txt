@@ -1,0 +1,8 @@
+13               sphere---------->BODY
+0 0 0            ambient
+1 2 2            r g b diffuse
+0 0 0            r g b specular
+
+0 -6 -3          center
+3.65             radius
+

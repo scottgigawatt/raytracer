@@ -1,0 +1,170 @@
+8 6           world x and y dims
+0 0 3        viewpoint (x, y, z)
+
+14            Floor 
+0 5 5         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+0 1 0       normal
+-4 -3 0       point
+
+14            Ceiling
+5 0 5         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+0 1 0       normal
+-4 3 0       point
+
+13            sphere
+0 5 5         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+0 3 -1        center
+.5           radius
+
+13            sphere
+0 5 5         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+-5 3 -3        center
+.5           radius
+
+13            sphere
+0 5 5         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+5 3 -3        center
+.5           radius
+
+13            floor (right) sphere
+5 0 5         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+5 -3 -3       center
+.5            radius
+
+13            floor (left) sphere
+5 0 5         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+-5 -3 -3      center
+.5            radius
+
+13            floor (center 2) sphere
+10 0 10         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+0 -3 -1       center
+.5            radius
+
+13            floor (center 2) sphere
+10 0 10         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+0 -3 -11.5 center
+2.5            radius
+
+13            floor (center 2) sphere
+10 0 10         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+0 3 -11.5 center
+2.5            radius
+
+13            floor (center 2) sphere
+10 10 10         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+0 0 -11.5 center
+2.5            radius
+
+13            floor (center 2) sphere
+10 0 10         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+-2.5 -3 -15 center
+2.5            radius
+
+13            floor (center 2) sphere
+10 0 10         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+-2.5 3 -15 center
+2.5            radius
+
+13            floor (center 2) sphere
+10 10 10         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+-2.5 0 -15 center
+2.5            radius
+
+13            floor (center 2) sphere
+10 0 10         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+2.5 -3 -15 center
+2.5            radius
+
+13            floor (center 2) sphere
+10 0 10         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+2.5 3 -15 center
+2.5            radius
+
+13            floor (center 2) sphere
+10 10 10         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+2.5 0 -15 center
+2.5            radius
+
+14            Left Wall
+0 5 5         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+1 0 1       normal
+-17 -1 0       point
+
+14             right Wall
+5 0 5          r g b ambient
+0 0 0          r g b diffuse
+0 0 0          r g b specular
+
+-1 0 1         normal
+17 -1 0        point
+
+13            floor (center 2) sphere
+0 50 50        r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+9.5 0 -10 center
+5            radius
+
+13            floor (center 2) sphere
+0 50 50         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+-9.5 0 -10 center
+5            radius

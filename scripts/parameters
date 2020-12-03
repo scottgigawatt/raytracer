@@ -1,0 +1,1 @@
+r 800 600 < ../input/specTile.txt > specTile.ppm 2> gdb.debug

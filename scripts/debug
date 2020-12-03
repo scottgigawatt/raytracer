@@ -1,0 +1,37 @@
+#!/bin/bash
+
+#
+# debug:   Runs the raytracer program with the GDB debugger.
+#
+# Author:  Scott Gigawatt
+#
+# Version: 9 June 2017
+#
+
+# Ensure the GDB debugger is installed
+type display >/dev/null 2>&1 || {
+	echo "I require 'gdb' but it's not installed.  Aborting." 1>&2
+	exit 1
+}
+
+# Clean and compile
+pushd ..
+make clean && make
+popd
+
+# Execute gdb debugger
+gdb ../bin/raytrace --command=parameters
+
+# Display the debugging information
+echo -e "\n\n<----------------- BEGIN DEBUG LOG ----------------->"
+cat gdb.debug
+echo -e "<------------------ END DEBUG LOG ------------------>\n\n"
+
+# Ensure the display utility is installed
+type display >/dev/null 2>&1 || {
+	echo "Install 'display' utility to view PPM images." 1>&2
+	exit 1
+}
+
+# Display the finished image
+display *.ppm

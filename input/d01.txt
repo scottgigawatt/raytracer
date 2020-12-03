@@ -1,0 +1,24 @@
+8 6           world x and y dims
+0 0 3         viewpoint (x, y, z)
+
+20            pplane (REG Plane 14)
+1 2 3         r g b ambient
+25 15 15      r g b diffuse
+0 0 0         r g b specular
+
+0 0  1        normal
+0 0 -8        point
+1             shader index
+
+13            sphere
+0 0 0         r g b ambient
+0 1 2         r g b diffuse
+0 0 0         r g b specular
+
+0 0 -3        center
+1.8           radius
+
+10            light
+10 7 4         r g b ambient
+0 0 0         center
+

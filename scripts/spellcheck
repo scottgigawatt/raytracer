@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#
+# spellcheck: Checks the programs source files for spelling errors.
+#
+# Author:     Scott Gigawatt
+#
+# Version:    9 June 2017
+#
+
+# Ensure aspell is installed
+type aspell >/dev/null 2>&1 || {
+	echo "I require aspell but it's not installed.  Aborting." 1>&2
+	exit 1
+}
+
+# Check for spelling errors
+for i in ../src/*.*; do
+	aspell -c ${i}
+done

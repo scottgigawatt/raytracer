@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#
+# ppm2jpeg: Converts all PPM images in the current directory to JPEG images.
+#
+# Author:   Scott Gigawatt
+#
+# Version:  9 June 2017
+#
+
+# Ensure the ImageMagick convert utility is installed
+type convert >/dev/null 2>&1 || {
+	echo "I require ImageMagick but it's not installed.  Aborting." 1>&2
+	exit 1
+}
+
+# Ensure there are PPM images to convert
+if [[ $(ls -1 *.ppm 2>/dev/null | wc -l) -eq 0 ]]; then
+	echo "Directory '$(pwd)' does not contain any PPM images.  Aborting."
+	exit 1
+fi
+
+# Convert *.ppm images to *.jpeg
+for i in *.ppm; do
+	echo -ne "Converting '${i}' to '${i%.*}.jpeg' ... "
+	convert ${i} ${i%.*}.jpeg &>/dev/null
+
+	if [[ ${?} -eq 0 ]]; then
+		echo -e -n "Done!" | awk '{print "\033[1;32m" $0 "\033[1;0m"}'
+	else
+		echo -e -n "Failed!" | awk '{print "\033[1;31m" $0 "\033[1;0m"}'
+	fi
+done

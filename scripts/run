@@ -1,0 +1,59 @@
+#!/bin/bash
+
+#
+# run:     Runs the raytracer program.
+#
+# Author:  Scott Gigawatt
+#
+# Version: 9 June 2017
+#
+
+# Configuration variables
+EXE="../bin/raytrace"
+INPUT="../input"
+DBG="ray.debug"
+
+#
+# Valid image sizes:
+#
+#   1400 x 1050
+#   400  x 300
+#   800  x 600
+#   100  x 75
+#
+WIDTH="1400"
+HEIGHT="1050"
+
+# Clean and compile
+pushd ..
+make clean && make
+popd
+
+echo -e "\nRunning raytracer program ... "
+echo -en "\nRendering model ... "
+
+# Run the raytracer program
+time ${EXE} ${WIDTH} ${HEIGHT} <${INPUT}/antialias.txt >aa.ppm 2>${DBG}
+
+if [[ ${?} -eq 0 ]]; then
+	echo -e -n "Done!" | awk '{print "\033[1;32m" $0 "\033[1;0m"}'
+else
+	echo -e -n "Failed!" | awk '{print "\033[1;31m" $0 "\033[1;0m"}'
+fi
+
+# Display the debugging information
+echo -e "<\n\n----------------- BEGIN DEBUG LOG ----------------->"
+cat ${DBG}
+echo -e "<------------------ END DEBUG LOG ------------------>\n\n"
+
+# Convert the PPM images to JPEG format
+./ppm2jpeg
+
+# Ensure the display utility is installed
+type display >/dev/null 2>&1 || {
+	echo "Install 'display' utility to view PPM images." 1>&2
+	exit 1
+}
+
+# Display the finished image
+display *.jpeg

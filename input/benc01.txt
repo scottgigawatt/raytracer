@@ -1,0 +1,74 @@
+8 6           world x and y dims
+1 0 3        viewpoint (x, y, z)
+
+14            r side
+2 2 2         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+-1 0 0       normal
+5 0 0       point
+
+14            l side
+2 2 2         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+1 0 0       normal
+-5 0 0       point
+
+14            top wall
+2 2 2         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+0 1 0       normal
+0 3 0       point
+
+14            yellow back
+10 10 0         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+0 0 1       normal
+0 0 -20       point
+
+13            Red ball
+4 1 1         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+0 -11 -15       center
+4          radius
+
+13            Red ball
+4 1 1         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+0 -18 -15       center
+4          radius
+
+13            brown ball
+2 1 1         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+.2 -8.8 -10       center
+1.5          radius
+
+13            brown ball
+2 1 1         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+-.4 -8.8 -10       center
+1.5          radius
+
+13            black ball
+0 0 0         r g b ambient
+0 0 0         r g b diffuse
+0 0 0         r g b specular
+
+0 -7.5 -8       center
+1.2             radius
